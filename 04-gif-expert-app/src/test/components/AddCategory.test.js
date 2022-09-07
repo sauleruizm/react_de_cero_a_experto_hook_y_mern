@@ -14,7 +14,7 @@ describe('Pruebas en <AddCategory />', () => {
     } );
 
 
-    test('debe de mostrarse correctamente ', () => {
+    test('debe de mostrarse correctamente', () => {
 
         expect(wrapper).toMatchSnapshot();
     })
