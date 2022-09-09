@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const  useFetch = async (url) => {
+export function useFetch  (url) {
 
 
 	const [state, setState] = useState({
@@ -18,9 +18,9 @@ const  useFetch = async (url) => {
 		const resp = await fetch(url)
 		const data = await resp.json()
 
-		console.log(data)
+		console.log('useFetch =>',data)
 		setState({
-			data,
+			data: data,
 			isLoading: false,
 			hasError: null,
 		})
@@ -30,10 +30,10 @@ const  useFetch = async (url) => {
 		getFetch()
 	}, [url])
 
-	console.log(state)
+	//console.log('usefetch: return state=>',state)
 	return {
-		...state,
+		...state
 	}
 }
 
-export default useFetch
+// export default useFetch
