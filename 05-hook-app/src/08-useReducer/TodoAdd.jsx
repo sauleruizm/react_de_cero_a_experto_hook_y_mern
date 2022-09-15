@@ -1,15 +1,15 @@
 import React from 'react'
+import { useReducer } from 'react'
 import { useForm } from '../hooks/index'
+import { initialState } from './TodoApp'
 
 export const TodoAdd = ({onNewTodo}) => {
 
-  const { 
-    description,
-    onInputChange,
-    onResetForm, 
-  } = useForm({
-    description:''
-  })
+  const handleNewTodo = (todo) => {
+    console.log({todo})
+  }
+
+  const { description, onInputChange, onResetForm, } = useForm({ description:'' })
 
   const onFormSubmit = (event) =>{
     event.preventDefault()
@@ -21,7 +21,8 @@ export const TodoAdd = ({onNewTodo}) => {
       done: false,
       description: description
     }
-    onNewTodo(newTodo)
+
+    onNewTodo && onNewTodo(newTodo)
     onResetForm()
   }
 
