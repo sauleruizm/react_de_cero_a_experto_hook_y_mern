@@ -1,7 +1,5 @@
 import React from 'react'
-import { useReducer } from 'react'
 import { useForm } from '../hooks/index'
-import { initialState } from './TodoApp'
 
 export const TodoAdd = ({onNewTodo}) => {
 
