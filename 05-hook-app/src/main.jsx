@@ -20,10 +20,12 @@ import { MainApp } from './09-useContext/MainApp'
 
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
   <BrowserRouter>
     {/* <React.StrictMode> */}
       <MainApp />
     {/* </React.StrictMode> */}
   </BrowserRouter>
-)
+);
