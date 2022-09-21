@@ -10,11 +10,10 @@ export const MultipleCustomHooks = () => {
 	const { data, isLoading, hasError } = useFetch(`https://www.breakingbadapi.com/api/quotes/${counter}`)
 	const { author, quote} = !!data && data[0]
 	
-	// console.log({data,isLoading, hasError})
 
 	return (
 		<>
-			<div>Brakin Bad Quote</div>
+			<div>Braking Bad Quote</div>
 			<hr/>
 			{
 				isLoading 
@@ -22,7 +21,9 @@ export const MultipleCustomHooks = () => {
 				:<Quote quote={quote} author={author}/>
 
 			}
-			<button className='btn btn-primary'
+			<button 
+				className='btn btn-primary'
+				disabled={ isLoading }
 				onClick={()=> {increment()}}>
 				Next quote
 			</button>
