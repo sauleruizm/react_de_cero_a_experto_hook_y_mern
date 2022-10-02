@@ -18,7 +18,7 @@ export const HeroCard = ({ id, superhero, publisher, alter_ego, first_appearance
 
                 <div className="row no-gutters">
                     
-                    <div className="col-4">
+                    <div className="col-4 animate__animated animate__bounce">
                         <img src={ heroImageUrl } className="card-img" alt={ superhero } />
                     </div>
 
