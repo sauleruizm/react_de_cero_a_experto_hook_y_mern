@@ -4,7 +4,7 @@ import { AuthContext } from '../context/AuthContext'
 
 export const LoginPage = () => {
 
-	const { login } = useContext( AuthContext )
+	const { login, logout } = useContext( AuthContext )
   const navigate = useNavigate()
 
 
