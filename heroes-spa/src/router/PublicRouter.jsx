@@ -1,12 +1,14 @@
-import { useContext } from "react"
-import { Navigate } from 'react-router-dom'
-import { AuthContext } from "../auth"
-const PublicRouter = () => {
+import { useContext } from 'react';
+import { Navigate } from 'react-router-dom';
+
+import { AuthContext } from '../auth';
 
 
-  const {logged } = useContext(AuthContext)
+export const PublicRoute = ({ children }) => {
 
-  return ( !logged ) ? children : <Navigate to='/marvel'/>
+    const { logged } = useContext( AuthContext );
+    
+    return (!logged)
+        ? children
+        : <Navigate to="/marvel" />
 }
-
-export default PublicRouter
