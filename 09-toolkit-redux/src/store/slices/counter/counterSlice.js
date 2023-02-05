@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   counter: 10,
+  times: 0
 }
 
 export const counterSlice = createSlice({
@@ -26,3 +27,4 @@ export const counterSlice = createSlice({
 
 // Action creators are generated for each case reducer function
 export const { increment, decrement, incrementBy } = counterSlice.actions
+
